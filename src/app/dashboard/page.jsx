@@ -120,7 +120,7 @@ import  formatDate  from '../../lib/helper'
 //   }
 // ];
 
-function page() {
+function Page() {
   const tasks = useSelector(state => state.task?.tasks)
   const dispatch = useDispatch()
 
@@ -200,4 +200,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

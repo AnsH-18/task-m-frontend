@@ -1,7 +1,7 @@
 import React from 'react'
 import KanbanBoard from "../../components/KanbanBoard"
 
-function page() {
+function Page() {
   return (
     <div>
         <KanbanBoard/>
@@ -9,4 +9,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

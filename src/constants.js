@@ -1,1 +1,1 @@
-export const BASE_SERVER_URL = "https://task-m-backend.vercel.app/"
+export const BASE_SERVER_URL = "https://task-m-backend.vercel.app"

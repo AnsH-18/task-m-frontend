@@ -37,13 +37,13 @@ export function AuthTab() {
       if (authSlice.status === 200 && authSlice.loggedin == false) {
         dispatch(loginUser(userCredentials))
       }
-      },[authSlice.status, authSlice.loggedin, handleLogin, dispatch, userCredentials])
+      },[authSlice.status, authSlice.loggedin, handleLogin, dispatch])
 
     useEffect(() => {
       if(authSlice.status === 200 && authSlice.loggedin == true){
         router.push("/dashboard")
       }
-    }, [authSlice.status, authSlice.loggedin, router, dispatch, userCredentials])
+    }, [authSlice.status, authSlice.loggedin, router, dispatch])
     
     const handleUserInput = (e) => {
 

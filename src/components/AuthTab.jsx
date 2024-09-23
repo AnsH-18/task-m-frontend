@@ -37,7 +37,7 @@ export function AuthTab() {
       if (authSlice.status === 200 && authSlice.loggedin == false) {
         dispatch(loginUser(userCredentials))
       }
-      },[authSlice.status, authSlice.loggedin, handleLogin, dispatch])
+      },[authSlice.status, authSlice.loggedin, dispatch])
 
     useEffect(() => {
       if(authSlice.status === 200 && authSlice.loggedin == true){

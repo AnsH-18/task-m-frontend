@@ -129,7 +129,7 @@ function Page() {
 
   useEffect(() => {
     dispatch(getAllTasks())
-  }, [isOpen,dispatch])
+  }, [isOpen, dispatch])
   
   const [task, setTask] = useState({
       tittle: "",

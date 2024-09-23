@@ -18,35 +18,34 @@ import {DatePickerDemo} from "./DatePicker"
 import {X} from "lucide-react"
 
 export function DialogDemo(props) {
-
   return (
-    <Dialog open= {props.open} onOpenChange={props.optionOpen}>
+    <Dialog open={props.open} onOpenChange={props.optionOpen}>
       <DialogTrigger asChild>
-        <Button onClick = {props.handleOpen} variant="outline">Create Task</Button>
+        <Button onClick={props.handleOpen} variant="outline">Create Task</Button>
       </DialogTrigger>
       <DialogContent className="fixed inset-0 flex items-center justify-center z-50">
         <div className="bg-background p-6 rounded-lg shadow-lg max-w-md w-full">
-          <DialogHeader className= "relative">
+          <DialogHeader className="relative">
             <DialogTitle>Create A Task</DialogTitle>
             <DialogDescription>
-             Create A new Task. Click save when you're done.
+              Create A new Task. Click save when you&apos;re done.
             </DialogDescription>
-            <DialogClose onClick={props.handleClose}  asChild className="absolute top-0 right-0 hover:cursor-pointer">
-                <X className="w-4 h-4"></X>
+            <DialogClose onClick={props.handleClose} asChild className="absolute top-0 right-0 hover:cursor-pointer">
+              <X className="w-4 h-4"></X>
             </DialogClose>
           </DialogHeader>
           <div className="grid gap-4 py-4">
             <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="tittle" className="text-right">
-                Tittle
+              <Label htmlFor="title" className="text-right">
+                Title
               </Label>
-              <Input value={props.state.tittle} onChange={props.set} name="tittle" id="tittle" defaultValue="" className="col-span-3" />
+              <Input value={props.state.title} onChange={props.set} name="title" id="title" defaultValue="" className="col-span-3" />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="description" className="text-right grid-cols-1">
                 Description
               </Label>
-              <Textarea value={props.state.description} onChange={props.set} name="description" id="description" className= "col-span-3" placeholder="write description" />
+              <Textarea value={props.state.description} onChange={props.set} name="description" id="description" className="col-span-3" placeholder="Write description" />
             </div>
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="priority" className="text-right grid-cols-1">
@@ -58,11 +57,11 @@ export function DialogDemo(props) {
               <Label htmlFor="duedate" className="text-right grid-cols-1">
                 Due date
               </Label>
-              <DatePickerDemo value={props.dateValue} update={props.setDate}  name= "dueDate"/>
+              <DatePickerDemo value={props.dateValue} update={props.setDate} name="dueDate"/>
             </div>
           </div>
           <DialogFooter>
-            <Button type="submit" onClick = {props.submit}>Save changes</Button>
+            <Button type="submit" onClick={props.submit}>Save changes</Button>
           </DialogFooter>
         </div>
       </DialogContent>

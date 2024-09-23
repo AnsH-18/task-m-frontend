@@ -28,7 +28,7 @@ export function UpdateDialogDemo() {
           <DialogHeader className= "relative">
             <DialogTitle>Create A Task</DialogTitle>
             <DialogDescription>
-             Create A new Task. Click save when you're done.
+             Create A new Task. Click save when you&apos;re done.
             </DialogDescription>
             <DialogClose   asChild className="absolute top-0 right-0 hover:cursor-pointer">
                 <X className="w-4 h-4"></X>

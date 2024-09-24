@@ -27,7 +27,10 @@ const getAllTasks = createAsyncThunk(
 
         const response = await fetch(url, {
             method: "GET",
-            credentials: "include"
+            credentials: "include",
+            headers: {
+                'Content-Type': 'application/json',
+            }
         })
 
         const data = await response.json()
@@ -49,7 +52,10 @@ const createTask = createAsyncThunk(
 
         const response = await fetch(url, {
             method: "POST",
-            credentials: "include"
+            credentials: "include",
+            headers: {
+                'Content-Type': 'application/json',
+            }
         })
 
         const data = await response.json()
@@ -67,7 +73,10 @@ const deleteTask = createAsyncThunk(
         url.searchParams.set("taskid", taskid)
         const response = await fetch(url, {
             method: "DELETE",
-            credentials: "include"
+            credentials: "include",
+            headers: {
+                'Content-Type': 'application/json',
+            }
         })
 
         const data = await response.json()
@@ -86,7 +95,10 @@ const updateTaskStatus = createAsyncThunk(
         url.searchParams.set("taskid", taskinfo._id)
         const response = await fetch(url, {
             method: "POST",
-            credentials: "include"
+            credentials: "include",
+            headers: {
+                'Content-Type': 'application/json',
+            }
         })
 
         const data = await response.json()
